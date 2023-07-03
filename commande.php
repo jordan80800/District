@@ -104,7 +104,7 @@ if (isset($_GET['id'])) {
                   <label for="adresse" class="form-label  text-light">Votre Adresse :</label>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <textarea class="form-control w-75   " id="adresse" rows="3" name="adresse_client" required></textarea>
+                  <textarea class="form-control w-75   " id="adresse" rows="4" name="adresse_client" required></textarea>
                 </div>
               </div>
             </div>
