@@ -3,7 +3,7 @@ function ConnexionBase() {
 
 try 
 {
-    $connexion = new PDO('mysql:host=localhost;charset=utf8;dbname=district', 'root', '');
+    $connexion = new PDO('mysql:host=localhost;charset=utf8;dbname=district', 'admin', '130602Jojo');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $connexion;
 

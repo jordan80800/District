@@ -3,8 +3,6 @@ include "db.php";
 include "DAO/fonction.classe.php";
 include "DAO/Presentation.classes.php";
 
-
-
 $header = new Utilitaires();
 $db = connexionBase();
 
@@ -14,7 +12,18 @@ if (isset($_GET['id'])) {
   $requete->execute([':id' => $platid]);
   $lesplats = $requete->fetchAll(PDO::FETCH_ASSOC);
 }
+
+if (isset($_GET['id'])) {
+  $platid = $_GET['id'];
+  $requete = $db->prepare("SELECT * FROM plat WHERE id=:id");
+  $requete->execute([':id' => $platid]);
+
+  $lesplats = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,14 +34,9 @@ if (isset($_GET['id'])) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
-
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/png" href="assets/images_the_district/the_district_brand/instagram_profile_image-removebg-preview.png">
   <title>Commande</title>
-  <style>
-
-  </style>
 </head>
 
 <body>
