@@ -1,8 +1,9 @@
 <?php
+
 class Utilitaires
 {
 
-    public function GetHeader()
+    public function GetNav()
     {
 ?>
 
@@ -16,35 +17,34 @@ class Utilitaires
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold text-light" aria-current="page" href="#">Accueil</a>
+                                <a class="nav-link active fw-bold text-light hovera" aria-current="page" href="index.php">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold text-light" href="categories.php">Catégories</a>
+                                <a class="nav-link active fw-bold text-light hovera" href="categories.php">Catégories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold text-light " href="#">Plats</a>
+                                <a class="nav-link active fw-bold text-light  hovera" href="plats.php">Plats</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active fw-bold text-light" href="#">Contact</a>
+                                <a class="nav-link active fw-bold text-light hovera" href="#">Contact</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-
+        <?php }
+    public function GetImageheader($search)
+    { ?>
             <div class="container-fluid g-0 contain">
                 <div class="image-container d-none d-md-block">
                     <img class="image" src="assets\images_the_district\nouritture.jpg" alt="Your Image " id="imagetop">
-                    <form class="form-inline">
-                        <div class="input-group d-none d-sm-block">
-                            <input type="search" class="form-control" placeholder="Rechercher Un plat" id="ss">
-                            <div>
-                                <button class=" btn-primary bg-danger" type="submit" id="se">
-                                    <i class="fa fa-search"></i> Rechercher
-                                </button>
+                    <?php if ($search) { ?>
+                        <form class="form-inline">
+                            <div class="input-group d-none d-sm-block">
+                                <input type="search" class="form-control" placeholder="Rechercher Un plat" id="ss">
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    <?php } ?>
                 </div>
             </div>
         <?php
@@ -54,21 +54,28 @@ class Utilitaires
     {
         ?>
 
-            <hr class="hrf">
-            <footer class="foot bg-light d-flex justify-content-start ">
-                <ul class="d-flex flex-row w-50 justify-content-between m-0 align-items-center g-0">
-                    <li><img src="assets\images_the_district\the_district_brand\logo facebbok.png" alt="logofacebook" id="reseaux"></li>
-                    <li><img src="assets\images_the_district\the_district_brand\logo youtube.png" alt="logoyoutube" id="reseaux"></li>
-                    <li><img src="assets\images_the_district\the_district_brand\insta logo.png" alt="logoinsta" id="reseaux"></li>
 
-                </ul>
-                <ul class="d-flex flex-row w-25 justify-content-end m-0 align-items-end g-0">
-                    <div class="d-flex justify-content-end">
-                        <li class="d-flex flex-row w-50 justify-content-between">Mentions Légale</li>
-                        <li>Politique de confidentialite</li>
-                </ul>
+            <hr class="hrf">
+            <div class="row">
+                <div class="col-6">
+                    <footer class="foot bg-light d-flex justify-content-start ">
+                        <ul class="d-flex flex-row w-50 justify-content-between m-0 align-items-center g-0">
+                            <li><img src="assets\images_the_district\the_district_brand\logo facebbok.png" alt="logofacebook" id="reseaux"></li>
+                            <li><img src="assets\images_the_district\the_district_brand\logo youtube.png" alt="logoyoutube" id="reseaux"></li>
+                            <li><img src="assets\images_the_district\the_district_brand\insta logo.png" alt="logoinsta" id="reseaux"></li>
+
+                        </ul>
                 </div>
+                <div class="col-6">
+                    <ul class=" d-flex flex-row w-50 justify-content-between m-0 align-items-center g-0 terter">
+                        <li>Mentions Légale</li>
+                        <li>Politique de confidentialite</li>
+                    </ul>
+                </div>
+            </div>
             </footer>
-    <?php
+
+        <?php
     }
+
 }

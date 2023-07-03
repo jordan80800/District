@@ -1,7 +1,7 @@
 <?php
 include "db.php";
-include "DAO\Presentation.classes.php";
 include "DAO/fonction.classe.php";
+include "DAO\Presentation.classes.php";
 
 $header = new Utilitaires;
 $db = connexionBase();
@@ -28,7 +28,9 @@ $lesplats=$requete->GetPlatPop();
 </head>
 
 <body>
-  <?php echo $header->GetHeader() ?>
+  <?php echo $header->GetNav() ?>
+  <?php echo $header->GetImageheader(true) ?>
+
   <br>
   <h1>Les meilleurs categories :</h1>
   <hr>
