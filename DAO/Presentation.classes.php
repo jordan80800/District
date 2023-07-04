@@ -1,5 +1,4 @@
 <?php
-
 class Utilitaires
 {
 
@@ -29,6 +28,9 @@ class Utilitaires
                                 <a class="nav-link active fw-bold text-light hovera" href="#">Contact</a>
                             </li>
                         </ul>
+                        <a href="sign_up_form.php" class="btn bg-dark text-light mx-2">S'inscrire</a>
+                        <a href="log_in_form.php" class="btn bg-dark text-light mx-4">Se connecter</a>
+
                     </div>
                 </div>
             </nav>
@@ -75,7 +77,6 @@ class Utilitaires
             </div>
             </footer>
 
-        <?php
+    <?php
     }
-
 }

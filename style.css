@@ -190,6 +190,8 @@ h4 {
 .cardd {
   background-color: rgb(246, 235, 235);
 }
+<?php echo $header->GetNav() ?>
+  <?php echo $header->GetImageheader(true) ?>
 
 
 .contain {
@@ -324,6 +326,8 @@ a {
     color: black !important;
   }
 
-/* page de login */
+
+
+
 
   

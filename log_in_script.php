@@ -6,10 +6,10 @@ $db= ConnexionBase();
 
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
-$username= $_poste['name'];
+$username= $POST['name'];
 $password = $_POST['password'];
-$query=$db->prepare("select nom_prenom,password from user where nom_prenom=:user");
-$query->bindValue(':user,$username');
+$query=$db->prepare("select nom_prenom,password from utilisateur where nom_prenom=:user");
+$query->bindValue(':name,$name');
 $query->execute();
 $user= $query->fetch();
 
