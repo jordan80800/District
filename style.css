@@ -4,7 +4,7 @@
   src: url('font/kitaharascript-webfont.woff2') format('woff2'),
     url('font/kitaharascript-webfont.woff') format('woff');
   font-weight: normal;
-  font-style : normal;
+  font-style: normal;
 
 }
 
@@ -47,6 +47,8 @@ h2::first-letter {
 .navstyle {
   background-color: rgba(124, 22, 22);
 }
+
+/* Add this CSS to your style.css file */
 
 
 /* pas de padding ni de marging sur ma page  */
@@ -99,7 +101,8 @@ body {
   border: 3px solid grey;
   transition: 0.5s;
 }
-.cat-image:hover{
+
+.cat-image:hover {
   transform: scale(1.1);
 }
 
@@ -130,7 +133,7 @@ hr {
   width: 40px;
 }
 
-.terter{
+.terter {
   list-style: none;
 }
 
@@ -190,15 +193,6 @@ h4 {
 .cardd {
   background-color: rgb(246, 235, 235);
 }
-<?php echo $header->GetNav() ?>
-  <?php echo $header->GetImageheader(true) ?>
-
-
-.contain {
-  margin-top: 80px;
-}
-
-
 
 
 #imagepagecat {
@@ -246,7 +240,7 @@ a {
 
 
 
-#image{
+#image {
   width: 410px;
   height: 255px;
 }
@@ -268,66 +262,60 @@ a {
   z-index: -1;
 }
 
-    .custom-container {
-      margin-top: 30px;
-    }
-
-    
-    .quantity-input {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .quantity-input input {
-      width: 60px;
-    }
-
-    .custom-container {
-      margin-top: 30px;
-      border-radius: 10% 10% 0 0;
-    }
-
-    #image {
-      max-width: 100%;
-      border-radius: 10% 0 0 0 ;
-
-    }
-
-    .quantity-input {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .quantity-input input {
-      width: 60px;
-    }
-*
-    .btncommande{
-      background-color: rgba(124, 22, 22) !important;
-    }
-
-     .input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .custom-container .row {
-    justify-content: center;
-  }
+.custom-container {
+  margin-top: 30px;
+}
 
 
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
+.quantity-input input {
+  width: 60px;
+}
 
-  .hovera:hover{
-    background-color: white !important;
-    color: black !important;
-  }
+.custom-container {
+  margin-top: 30px;
+  border-radius: 10% 10% 0 0;
+}
+
+#image {
+  max-width: 100%;
+  border-radius: 10% 0 0 0;
+
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-input input {
+  width: 60px;
+}
+
+* .btncommande {
+  background-color: rgba(124, 22, 22) !important;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-container .row {
+  justify-content: center;
+}
 
 
 
 
-
-  
+.hovera:hover {
+  background-color: white !important;
+  color: black !important;
+}

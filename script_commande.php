@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 
 require 'vendor/autoload.php';

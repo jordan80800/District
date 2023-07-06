@@ -41,7 +41,7 @@ class Fonction
         $catparpage = 6;
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
         $offset = ($page - 1) * $catparpage;
-        $requete = $this->db->prepare("SELECT categorie.id, categorie.image, categorie.libelle
+        $requete = $this->db->prepare("SELECT categorie.id, categorie.image, categorie.libelle,categorie.active
 FROM categorie
 where active = 'yes'
 LIMIT :offset, :limit;");
@@ -83,12 +83,20 @@ LIMIT :offset, :limit;");
         }
     }
 
-    public function GetPlatById($id){
+    public function GetPlatById($id)
+    {
         $requete = $this->db->prepare("SELECT * from plat where id=:id");
         $requete->bindValue(':id', $id, PDO::PARAM_INT);
         $requete->execute();
         $unplatid = $requete->fetch();
-        return $unplatid ;
+        return $unplatid;
     }
-   
+    public function GetAllPlats()
+    {
+        $requete = $this->db->prepare("SELECT *
+        FROM plat;");
+        $requete->execute();
+        $toutplat = $requete->fetchAll();
+        return $toutplat;
+    }
 }

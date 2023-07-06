@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "db.php";
 include "DAO/Presentation.classes.php";
 include "DAO/fonction.classe.php";
@@ -44,7 +46,7 @@ foreach ($toutecat as $uneCate) :
             <div class="image-container w-100 d-flex justify-content-center">
               <img src="assets/images_the_district/category/<?php echo $uneCate['image']; ?>" class="img cat-image" alt="Image" id="imagepagecat">
             </div>
-            <a href="#" type="button" class="btn bg-dark text-light btnpagecate"><?= $uneCate['libelle'] ?></a>
+            <a href="plats.php#cat<?=$uneCate['id']?>" type="button" class="btn bg-dark text-light btnpagecate"><?= $uneCate['libelle'] ?></a>
           </div>
         <?php endforeach; ?>
       </div>

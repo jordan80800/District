@@ -1,9 +1,15 @@
 <?php
+session_start();
 include 'db.php';
 $db = ConnexionBase();
 include "DAO/Presentation.classes.php";
 $header = new Utilitaires;
 
+if(isset($_SESSION['name'])){
+$username= $_SESSION['name'];
+echo '<span style="color :white ;">Bonjour :'.$username.'</span>';
+
+}
 ?>
 
 
@@ -28,7 +34,7 @@ $header = new Utilitaires;
         <div class="d-flex justify-content-center align-items-center mt-5">
             <div class="row w-50 text-center ">
                 <div class="entete">
-                    <h1 class="text-dark">Sign Up</h1>
+                    <h1 class="text-dark">S'inscrire</h1>
                 </div>
             </div>
         </div>

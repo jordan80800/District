@@ -32,3 +32,7 @@ function Commande() {
 
 // Appeler la fonction Commande() au chargement de la page
 window.addEventListener('load', Commande);
+
+
+
+   

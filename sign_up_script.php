@@ -1,7 +1,7 @@
 <?php
+session_start();
 include 'db.php';
 $db = ConnexionBase();
-session_start();
 if (isset($_POST['confirm'])) {
   $name = (isset($_POST['name']) && $_POST['name'] != '') ? $_POST['name'] : null;
   $email = (isset($_POST['email']) && $_POST['email'] != '') ? $_POST['email'] : null;

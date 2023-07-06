@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "db.php";
 include "DAO/fonction.classe.php";
 include "DAO/Presentation.classes.php";

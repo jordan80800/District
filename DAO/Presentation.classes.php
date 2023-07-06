@@ -4,10 +4,11 @@ class Utilitaires
 
     public function GetNav()
     {
+       
 ?>
 
         <body class="g-0">
-            <nav class="navbar navbar-expand-lg navbar_navbar-expand-lg p-0  g-0 position-fixed z-2 w-100 top-0 ">
+            <nav class="navbar navbar-expand-lg navbar_navbar-expand-lg p-0  g-0 position-relative z-2 w-100 top-0 ">
                 <div class="container-fluid g-0 d-flex align-items-center  navstyle">
                     <img src="../assets/images_the_district/the_district_brand/instagram_profile_image-removebg-preview.png" alt="Logo" width="70" height="25%" class="d-inline-block align-text-top ">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +26,23 @@ class Utilitaires
                                 <a class="nav-link active fw-bold text-light  hovera" href="plats.php">Plats</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active fw-bold text-light hovera" href="#">Contact</a>
+                                <a class="nav-link active fw-bold text-light hovera" href="contact.php">Contact</a>
                             </li>
                         </ul>
-                        <a href="sign_up_form.php" class="btn bg-dark text-light mx-2">S'inscrire</a>
-                        <a href="log_in_form.php" class="btn bg-dark text-light mx-4">Se connecter</a>
+                       <?php
+if (isset($_SESSION['name'])) {
+    $displaystyle = 'none';
+    $displayblock = 'block';
+} else {
+    $displaystyle = 'block';
+    $displayblock = 'none';
+}
+?>
+
+                        <a href="sign_up_form.php" class="btn bg-dark text-light mx-2" style="display: <?= $displaystyle ?>;">S'inscrire</a>
+                        <a href="log_in_form.php" class="btn bg-dark text-light mx-4" style="display: <?= $displaystyle ?>;">Se connecter</a>
+                        <a href="destroy_session.php" class="btn bg-dark text-light mx-4" style="display: <?= $displayblock ?>;" type="submite">Se Déconnecter</a>
+                        <a href="dashboard.php" class="btn bg-dark text-light mx-2" style="display: <?= $displayblock ?>;" >Tableau De Bord</a>
 
                     </div>
                 </div>

@@ -6,17 +6,18 @@ $db= ConnexionBase();
 
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
-$username= $POST['name'];
+$username= $_POST['name'];
+$email = $_POST['email'];
 $password = $_POST['password'];
-$query=$db->prepare("select nom_prenom,password from utilisateur where nom_prenom=:user");
-$query->bindValue(':name,$name');
+$query=$db->prepare("select nom_prenom,email,password from utilisateur where nom_prenom=:username");
+$query->bindValue(':username',$username);
 $query->execute();
 $user= $query->fetch();
 
 
-if($user && password_verify($password,$user['password'])){
+if($password==$user["password"]){
 $_SESSION['name']=$user['nom_prenom'];
-header("Location: index.php");
+ header("Location: index.php");
 exit;
 }
 else{

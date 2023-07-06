@@ -31,14 +31,19 @@ $lesplats=$requete->GetPlatPop();
 <body>
   <?php echo $header->GetNav() ?>
   <?php echo $header->GetImageheader(true) ?>
+<?php
 
-  <br>
+
+?>
+<div class="row">
+  <div class="col d-flex justify-content-center">
   <h1>Les meilleurs categories :</h1>
-  <hr>
-  <div class="container-fluid w-100">
-    <div class="row mt-5 g-3">
+  </div>
+  </div>
+  <div class="container-fluid  ">
+    <div class="row mt-5 g-3 d-flex justify-content-center ">
       <?php foreach ($lesCategories as $uneCategorie) : ?>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="col-md-3 ">
             <div class="image-container">
             <a href="catplats.php?catid=<?= $uneCategorie['id'] ?>">
 <img src="assets\images_the_district\category/<?= $uneCategorie['image'] ?>"  class=" cat-image" alt="Image" id="imagee">
@@ -51,17 +56,20 @@ $lesplats=$requete->GetPlatPop();
       <?php endforeach; ?>
     </div>
     <hr>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
     <h1>Nos meilleurs Plats :</h1>
+    </div>
+    </div>
 
-
-    <div class="row mt-5 g-3">
+    <div class="row mt-5 g-3 d-flex justify-content-center" >
       <?php foreach ($lesplats as $unplat) : ?>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="image-container">
+        <div class="col-md-3">
+            <div class="image-container " >
             <a href="catplats.php?catid=<?= $unplat['id'] ?>">
 <img src="assets\images_the_district\food/<?= $unplat['image'] ?>"  class=" cat-image" alt="Image" id="imagee">
 </a>
-<a href="#" type="button" class="btn  boutonplat"><?= $unplat['libelle'] ?></a>
+<a href="" type="button" class="btn  boutonplat"><?= $unplat['libelle'] ?></a>
 
             </div>
           
