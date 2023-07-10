@@ -22,7 +22,7 @@ function Commande() {
     } else {
       Swal.fire({
         title: 'Numéro de téléphone invalide',
-        text: 'Veuillez entrer un numéro de téléphone valide',
+        text: 'Veuillez entrer un numéro de téléphone valide soit un 06,03 ou un 07',
         icon: 'error',
         confirmButtonText: 'OK'
       });
